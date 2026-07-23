@@ -1,8 +1,29 @@
 aid: bailey44
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bailey44.png
 name: Bailey44
-description: 'Bailey44 is a company surfaced as a portfolio company of norwest-venture-partners and added
-  to the API Evangelist network as a stub for enrichment. Sector: unknown. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Bailey 44 (stylized Bailey/44) is a contemporary womenswear brand selling
+  direct-to-consumer through a Shopify storefront at bailey44.com. The label
+  offers women's apparel — dresses, tops, knits, and separates — around a brand
+  voice of optimism and self-expression ("The Future is Female"). Bailey44 was
+  surfaced in the API Evangelist network as a portfolio company of Norwest
+  Venture Partners. It does not publish a public developer API; its only
+  machine-readable surfaces are the Shopify Customer Account API discovery
+  documents (OpenID Connect / OAuth 2.0 authorization-server metadata, issuer
+  shopify.com/authentication/8596750398) served at bailey44.com/.well-known/,
+  a standard Shopify sitemap, and an RSS-backed news blog. This profile is a
+  lead enriched by the pipeline; no first-party API artifacts were found.
 url: https://raw.githubusercontent.com/api-evangelist/bailey44/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,12 +31,19 @@ x-backed-by:
 - norwest-venture-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-platform: shopify
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
-- Unknown
+- Fashion
+- Apparel
+- Womenswear
+- Ecommerce
+- Retail
+- Shopify
+- Direct-to-Consumer
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,3 +53,18 @@ maintainers:
 common:
 - type: Website
   url: https://bailey44.com
+- type: Blog
+  url: https://bailey44.com/blogs/news
+- type: PrivacyPolicy
+  url: https://bailey44.com/policies/privacy-policy
+- type: TermsOfService
+  url: https://bailey44.com/policies/terms-of-service
+- type: WellKnown
+  url: well-known/bailey44-well-known.yml
+- type: DomainSecurity
+  url: security/bailey44-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
