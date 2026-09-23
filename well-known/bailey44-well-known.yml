@@ -2,26 +2,26 @@ generated: '2026-07-18'
 method: searched
 source: live probe of https://bailey44.com/.well-known/*
 host: https://bailey44.com
-notes: >-
-  bailey44.com is a Shopify-hosted storefront. The OpenID Connect and OAuth
-  authorization-server metadata documents are served by Shopify's Customer
-  Account API (issuer https://shopify.com/authentication/8596750398) — a real,
-  first-party-served discovery surface on the bailey44.com host, not a Bailey44
-  developer API.
-documents:
-- path: /.well-known/openid-configuration
-  status: 200
-  file: bailey44-openid-configuration.json
-  spec: OpenID Connect Discovery 1.0
-  issuer: https://shopify.com/authentication/8596750398
-- path: /.well-known/oauth-authorization-server
-  status: 200
-  file: bailey44-oauth-authorization-server.json
-  spec: RFC 8414 OAuth 2.0 Authorization Server Metadata
-  issuer: https://shopify.com/authentication/8596750398
-- path: /.well-known/security.txt
-  status: 404
-- path: /.well-known/api-catalog
-  status: 404
-- path: /.well-known/ai-plugin.json
-  status: 404
+notes: bailey44.com is a Shopify-hosted storefront. The OpenID Connect and OAuth authorization-server
+  metadata documents are served by Shopify's Customer Account API (issuer https://shopify.com/authentication/8596750398)
+  — a real, first-party-served discovery surface on the bailey44.com host, not a Bailey44 developer API.
+hosts:
+- host: https://bailey44.com
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: bailey44-openid-configuration.json
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: bailey44-oauth-authorization-server.json
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
