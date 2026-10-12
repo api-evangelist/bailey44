@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/bailey44/integrations
+- https://n8n.io/integrations/bailey44/
+- https://composio.dev/toolkits/bailey44
+- https://monid.ai/tools/bailey44
+checked:
+- https://composio.dev/toolkits/bailey44
+- https://monid.ai/tools/bailey44
+- https://n8n.io/integrations/bailey44/
+- https://zapier.com/apps/bailey44/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
